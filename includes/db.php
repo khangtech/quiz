@@ -12,7 +12,7 @@ define("DB_NAME","2017_quiz");
 define("DB_HOST","localhost");
 define("DB_USER","root");
 define("DB_PASSWORD","");
-define("DB_NAME","2018_quiz_sap"); 
+define("DB_NAME","2019_quiz"); 
 
 
 

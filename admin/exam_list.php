@@ -39,7 +39,9 @@
                                         echo "<td>{$exam_desc}</td>" ;
                                         echo "<td>{$exam_total}</td>" ;
                                         echo "<td>{$tick_icon}</td>" ;
-                                        echo "<td><a href='exam_list.php?edit={$exam_id}'>Sửa</a>&nbsp;|&nbsp;<a href='exam_list.php?delete={$exam_id}'>Xóa</a>|&nbsp;<a class='btn btn-info' href='exam_topic_list.php?exam_id={$exam_id}'>Topic </a></td>";
+
+                                        //echo "<td><a href='exam_list.php?edit={$exam_id}'>Sửa</a>&nbsp;|&nbsp;<a href='exam_list.php?delete={$exam_id}'>Xóa</a>|&nbsp;<a class='btn btn-info' href='exam_topic_list.php?exam_id={$exam_id}'>Topic </a></td>";
+                                        echo "<td><a href='exam_list.php?edit={$exam_id}'>Sửa</a>&nbsp;|&nbsp;<a class='btn btn-info' href='exam_topic_list.php?exam_id={$exam_id}'>Topic </a></td>";
                                         $counter+=1;
                                       }
                                   ?>

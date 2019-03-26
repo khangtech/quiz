@@ -905,7 +905,7 @@ from exam_result
 GROUP by sale_id, exam_id ) as KetQua
 on EX.exam_id = KetQua.exam_id inner join bu on EX.bu_id = bu.bu_id
 
-GROUP BY EX.exam_id, bu.bu_name, exam_date';
+GROUP BY EX.exam_id, bu.bu_name, exam_date ORDER by exam_date DESC ';
   } else {
     $query_select = 'Select EX.exam_id,bu.bu_name,exam_date,exam_desc,exam_passed,exam_total,count(sale_id) as total ,  count(if(right_answer * 100 / exam_total >=exam_passed , 1, NULL)) as DAT,  count(if(right_answer * 100 / exam_total < exam_passed , 1, NULL)) as KHONGDAT from exams EX inner join
 
@@ -913,7 +913,7 @@ GROUP BY EX.exam_id, bu.bu_name, exam_date';
 from exam_result
 GROUP by sale_id, exam_id ) as KetQua
 on EX.exam_id = KetQua.exam_id inner join bu on EX.bu_id = bu.bu_id
-where EX.bu_id = ' . $bu_id . ' GROUP BY EX.exam_id,bu.bu_name, exam_date' ;
+where EX.bu_id = ' . $bu_id . ' GROUP BY EX.exam_id,bu.bu_name, exam_date ORDER by exam_date DESC' ;
   }
 
    //echo $query_select;
